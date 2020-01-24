@@ -23,7 +23,7 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
   - time
     
   ## Passo a passo
-    Após a instalação do Servidor Postgres é necessário a criação do Database e de um Usuário de acesso, o qual deve ser inserido no código na chamada da função get_connection_db(), onde está especificado a nomenclatura dos parâmetros.
+  - Após a instalação do Servidor Postgres é necessário a criação do Database e de um Usuário de acesso, o qual deve ser inserido no código na chamada da função get_connection_db(), onde está especificado a nomenclatura dos parâmetros.
     
   ### Criando o DB
   - https://www.fullstackpython.com/blog/postgresql-python-3-psycopg2-ubuntu-1604.html
