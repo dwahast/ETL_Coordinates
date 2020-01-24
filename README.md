@@ -3,7 +3,6 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
 
 # Informações
   ## Bibliotecas  
-  ### DataWarehouse
   ### Postgres 11
   - https://www.postgresql.org/download/linux/ubuntu/
   - $ sudo apt-get install postgresql-11
