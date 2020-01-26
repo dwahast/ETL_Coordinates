@@ -35,5 +35,6 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
 
   ### Execução do código
   - Após terem sido satisfeitas as etapas anteriores, para a etapa de execução do código, é necessária a identificação do diretório contendo os arquivos ".txt" onde de todos os arquivos, desse formato, presentes no diretório informado na váriavel path_master serão extraídas as informações de coordenadas.
+  - Para este caso a API disponibiliza 15000 requisições, estando 9000 utilizadas no envio deste teste.
   
   
