@@ -42,5 +42,9 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
   - Para este caso a API disponibiliza 15000 requisições, estando 1369 utilizadas no envio deste teste.
   - Para utilização da API com uma conta própria é necessário a criação de uma KEY através da criação de uma conta em https://developer.mapquest.com/user/login.
   - Tendo obtido a KEY é necessário atualizar a variável CONSUMER_KEY presente no arquivo "transform_scripts.py".
+
+  - Tendo sida satisfeitas todas as informações apresentadas é possível executar o código principal pelo comando:
+  
+    - $ python3 main_etl_coordinates.py
   
   
