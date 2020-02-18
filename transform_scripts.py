@@ -3,6 +3,8 @@ import geopy
 import pandas as pd
 from geopy.exc import GeocoderTimedOut
 from geopy.extra.rate_limiter import RateLimiter
+import tqdm
+
 
 #https://developer.mapquest.com/user/me/apps
 #mapquest
@@ -21,9 +23,13 @@ def transform_data(coordinates):
     #obter melhor performance na obtenção das informações através da API
     
     pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
-    dict_temp = pool.map(get_location, coordinates)
+    #dict_temp = pool.map(get_location, coordinates)
+    l_dict_temp = []
 
-    df_temp = pd.DataFrame(data=dict_temp)
+    for _ in tqdm.tqdm(pool.imap_unordered(get_location, coordinates), total=len(coordinates)):
+        l_dict_temp.append(_)
+    
+    df_temp = pd.DataFrame(data=l_dict_temp)
     
     #Remove as linhas repetidas baseadas na latitudes e longitude, são removidas as linhas com menos valores
     df_temp['count'] = pd.isnull(df_temp).sum(1)
@@ -39,7 +45,7 @@ def transform_data(coordinates):
 
 
 def get_location(coord):
-    
+
     dict_location = {}
     
     if (coord[0] != None) and (coord[1] != None):
