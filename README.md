@@ -21,6 +21,7 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
   - glob
   - multiprocessing
   - time
+  - tqdm (para barra de progresso)
     
   ## Passo a passo
   - Após a instalação do Servidor Postgres é necessário a criação do Database e de um Usuário de acesso, o qual deve ser inserido no código na chamada da função get_connection_db(), onde está especificado a nomenclatura dos parâmetros.
@@ -35,6 +36,11 @@ Extraindo coordenadas de um arquivo .txt, obtendo informações sobre essas coor
 
   ### Execução do código
   - Após terem sido satisfeitas as etapas anteriores, para a etapa de execução do código, é necessária a identificação do diretório contendo os arquivos ".txt" onde de todos os arquivos, desse formato, presentes no diretório informado na váriavel path_master serão extraídas as informações de coordenadas.
-  - Para este caso a API disponibiliza 15000 requisições, estando 9000 utilizadas no envio deste teste.
+  
+  - Por definição o código irá procurar os arquivos em uma pasta com o nome "Arquivos Extração", presente no mesmo diretório do código principal (main_etl_coordinates.py).
+
+  - Para este caso a API disponibiliza 15000 requisições, estando 1369 utilizadas no envio deste teste.
+  - Para utilização da API com uma conta própria é necessário a criação de uma KEY através da criação de uma conta em https://developer.mapquest.com/user/login.
+  - Tendo obtido a KEY é necessário atualizar a variável CONSUMER_KEY presente no arquivo "transform_scripts.py".
   
   
